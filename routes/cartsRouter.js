@@ -12,7 +12,7 @@ router.post("/", async(req,res)=>{
     }
 })
 
-router.get(":/cid",async (req,res)=>{
+router.get("/:cid",async (req,res)=>{
     try {
         const cart= await cm.getCartById(req.params.cid);
         res.json(cart);

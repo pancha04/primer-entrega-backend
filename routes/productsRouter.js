@@ -39,3 +39,4 @@ router.delete("/:pid", async (req,res)=>{
         res.status(500).json({ error: e.message });
     }
 })
+module.exports = router;
