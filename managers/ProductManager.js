@@ -22,8 +22,8 @@ class productManager{
     }
     async addProduct(product){
         const products= await this.readAll();
-
-        if(!product.title||!product.description||product.price==null||!product.thumbnail||!product.code||product.stock==null){
+        const{title, description, price, thumbnail, code, stock}= product;
+        if(!title||!description||price==null||!thumbnail||!code||stock==null){
             throw new Error("Todos los campos son obligatorios");
         }
         const newProduct={
